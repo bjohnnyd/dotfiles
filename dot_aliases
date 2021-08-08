@@ -1,0 +1,118 @@
+# Directory listing # Colors courtesy https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+  export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+else # macOS `ls`
+  colorflag="-G"
+  export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
+fi
+
+alias lh="ls -lFh ${colorflag}" #size,show type,human readable
+alias la="ls -lAFh ${colorflag}" #size,show type,human readable
+alias ld="ls -lhd */ ${colorflag}"   # List in long format, only directories
+
+#Open ZSHRC config file in EDITOR
+alias zshrconfig="${=EDITOR} ~/.zshrc"
+
+# Directory traversal
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+#Copy to clipboard
+alias clipboard="xclip -selection 'clipboard'"
+
+#If machine specific aliases exist source them
+if [ -f $HOME/.aliases.local ]; then
+    source $HOME/.aliases.local
+fi
+
+# Some tmux-related shell aliases
+# Attaches tmux to the last session; creates a new session if none exists.
+#alias t='tmux attach || tmux new-session'
+#alias t='tmux attach || tmux new-session\; new-window\; new-window'
+#alias t='tmux new-session \; split-window -v \;'
+alias t='tmux new-session \; split-window -v \; split-window -h \;'
+
+# Attaches tmux to a session (example: ta portal)
+alias ta='tmux attach -t'
+
+# Creates a new session
+alias tn='tmux new-session -s'
+
+# Lists all ongoing sessions
+alias tl='tmux list-sessions'
+
+# Kill specific session
+alias tk='tmux kill-session -t'
+# Kill all sessions
+alias tka='tmux kill-server'
+
+# STOP USING clear
+alias clear="echo STOP USING CLEAR!!!"
+
+# FZF Open in VIM
+alias vo="vim -o \`fzf\`"
+
+# Rust
+alias car="cargo run"
+
+## Get IP Loc (NOTE: this can hang so leave disabled if not needed)
+#alias getloc="PUB_IP=$(curl -s https://ipinfo.io/ip) && curl https://ipvigilante.com/${PUB_IP} | jq '.data.latitude, .data.longitude, .data.city_name, .data.country_name'"
+
+# Set nvim as vim
+alias vim="nvim"
+
+# Get analog sink for i3
+alias getsink="pacmd list-sinks | grep -B1 "analog" | head -1 | sed 's:[^0-9]::g'"
+
+# Management of multiple Repos with Gita
+alias mg="python3 -m gita"
+alias mgll="python3 -m gita ll | less"
+
+# Python3.8 and pip3 as default (should be disabled usually and not needed)
+# alias python="python3.8"
+# alias pip="pip3"
+
+# WebDev Server Webpage
+alias serve="browser-sync start --server --files"
+
+# Rust Cargo
+ca() {
+
+	if [[ $@ == "c" ]];then
+		command cargo clippy 2>&1
+	fi
+	if [[ $@ == "f" ]];then
+		command cargo fmt --all
+	fi
+	if [[ $@ == "t" ]];then
+		command cargo test 2>&1
+	fi
+	if [[ $@ == "tn" ]];then
+		command cargo test  -- --nocapture 2>&1
+	fi
+	if [[ $@ == "ta" ]];then
+		command cargo test --all 2>&1
+	fi
+	if [[ $@ == "tan" ]];then
+		command cargo test --all -- --nocapture 2>&1
+	fi
+	if [[ $@ == "b" ]];then
+		command cargo build
+	fi
+	if [[ $@ == "br" ]];then
+		command cargo build --release
+	fi
+}
+
+# Curl 20.04 has often issues with ciphers
+alias curl="curl --ciphers 'DEFAULT:!DH'"
+
+# Added alias for the magnificent bat
+alias cat="batcat"
+
+# Generate random password
+alias genpasswd="head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10 ; echo ''"

@@ -1,0 +1,80 @@
+# Set the shell
+export SHELL=/bin/zsh
+
+# Default editor
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+##Enable conda activate
+#if [[ -f $HOME/anaconda3/etc/profile.d/conda.sh ]]; then
+  #. $HOME/anaconda3/etc/profile.d/conda.sh
+  #conda activate base
+#fi
+
+#if [[ -f $HOME/miniconda3/etc/profile.d/conda.sh ]]; then
+  #. $HOME/miniconda3/etc/profile.d/conda.sh
+  #conda activate base
+#fi
+
+# SSH key
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+## Prefer US English and use UTF-8
+#export LC_ALL="en_UK.UTF-8"
+#export LANG="en_UK.UTF-8"
+
+# Make zsh know about hosts already accessed by SSH and other network related tools
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('$HOME/.miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/.miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/.miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+## Rstudio Fix on HiRes and Ubuntu 20
+export RSTUDIO_CHROMIUM_ARGUMENTS="--disable-seccomp-filter-sandbox"
+
+
+## To get fzf to respect .gitignore and improve search
+## Old Version
+# export FZF_DEFAULT_COMMAND="rg --files --hidden"
+
+# New Version for VIM as well
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+zeal-docs-fix() {
+    pushd "$HOME/.local/share/Zeal/Zeal/docsets" >/dev/null || return
+    find . -iname 'react-main*.js' -exec rm '{}' \;
+    popd >/dev/null || exit
+}
+
+## Enable polybar config
+export XDG_CONFIG_HOME="$HOME/.config"
+
+## JAVA 11 JDK env variable for CocGroovy/Nextflow
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+
+## Sets vim runtime directory so syntax files can be found
+export VIM_RUNTIME="$HOME/.vim"
+
+## ZSH troubleshooting (esp for history corruption)
+alias checkzsh="zsh -xv"
