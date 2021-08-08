@@ -1,0 +1,26 @@
+[core]
+	pager = delta
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+    line-numbers = true
+[interactive]
+    diffFilter = delta --color-only
+[user]
+	name = Johnny Debebe
+	email = "28043284+bjohnnyd@users.noreply.github.com "
+[github]
+	user = bjohnnyd
+[bitbucket]
+	user = JohnnyBD
+[cores]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	filemode = false
+[pull]
+	rebase = true
+[credential]
+	helper = cache
+[init]
+	defaultBranch = main
