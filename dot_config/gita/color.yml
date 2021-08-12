@@ -1,0 +1,2 @@
+{diverged: "\e[31;1m", in-sync: "\e[32m", local-ahead: "\e[35;1m", no-remote: "\e\
+    [37m", remote-ahead: "\e[31;1m"}
