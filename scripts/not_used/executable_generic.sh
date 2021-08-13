@@ -4,20 +4,30 @@ set -o errexit
 
 xst_version="master"
 
-cyan=$'\e[0;96m'
-white=$'\e[0;97m'
-endc=$'\e[0m'
+cyan=$'\033[96m'
+white=$'\033[0;97m'
+yellow=$'\033[93m'
+endc=$'\033[0m'
 
-msg() {
+start() {
   echo "$cyan--------------------------------------------------$endc"
   echo "$cyan-->$white $1 $endc"
   echo ""
 }
 
-bye() {
+
+msg() {
+  echo "$yellow--------------------------------------------------$endc"
+  echo "$yellow-->$white $1 $endc"
+  echo ""
+}
+
+end() {
   echo ""
   echo "$cyan-->$white End for $0 $endc"
   echo "$cyan--------------------------------------------------$endc"
 }
 
-msg "Execute $0..."
+start "Starting $0..."
+msg   "Processing $0..."
+end   "Ending $0..."
