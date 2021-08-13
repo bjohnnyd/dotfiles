@@ -1,0 +1,4 @@
+https://nsaunders.wordpress.com/2019/06/26/can-random-forest-provide-insights-into-yeast-cell-physiology/	Can random forest provide insights into how yeast grows? (What You%27re Doing Is Rather Desperate by Neil Saunders)	DS690 Winzer related RF small n big p	Biostar Planet!
+https://liorpachter.wordpress.com/2019/06/21/near-optimal-single-cell-rna-seq-pre-processing/	Near-optimal pre-processing of single-cell RNA-seq (Bits of DNA by Lior Pachter)	Single Cell RNA-seq	Biostar Planet!
+https://davetang.org/muse/2018/05/15/making-a-heatmap-in-r-with-the-pheatmap-package/	Making a heatmap in R with the pheatmap package	pheatmap and dendextend packages for R	Dave Tang%27s blog
+https://nsaunders.wordpress.com/2019/03/04/using-parameters-in-rmarkdown/	Using parameters in Rmarkdown	params in rmarkdown	What You%27re Doing Is Rather Desperate

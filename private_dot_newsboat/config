@@ -1,0 +1,8 @@
+## Location should be $HOME/.config/newsboat/config
+
+browser firefox
+external-url-viewer "urlview"
+
+bind-key U show-urls
+
+bookmark-cmd "~/dotfiles/newsboat/bookmark_cmd.sh"

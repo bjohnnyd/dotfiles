@@ -1,0 +1,4 @@
+https://academic.oup.com/bib/article/20/2/504/4554517?rss=1	Machine learning approaches to decipher hormone and HER2 receptor status phenotypes in breast cancer	ML	Briefings in Bioinformatics Current Issue
+https://academic.oup.com/bib/article/20/2/492/4554516?rss=1	Evaluation of variable selection methods for random forests and omics data sets	RF Variable Selection	Briefings in Bioinformatics Current Issue
+https://academic.oup.com/bib/article/20/2/471/4524048?rss=1	A benchmarking of workflows for detecting differential splicing and differential expression at isoform level in human RNA-seq studies	Alternative Splicing Workflows	Briefings in Bioinformatics Current Issue
+https://academic.oup.com/bib/article/20/2/436/4430960?rss=1	Elucidating the editome: bioinformatics approaches for RNA editing detection	RNA Edititing tools	Briefings in Bioinformatics Current Issue

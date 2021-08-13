@@ -2,3 +2,5 @@ README.md
 Dockerfile
 justfile
 assets/**
+wallpapers/**
+settings/**

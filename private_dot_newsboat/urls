@@ -1,0 +1,97 @@
+## 1. Location should be $HOME/.config/newsboat/urls
+## OPTIONAL: Location should be $HOME/.newsboat/urls
+
+#RNASeq
+http://www.rna-seqblog.com/feed "RNASeq"
+https://rnajournal.cshlp.org/rss/current.xml "RNASeq" "Journals" "Current"
+https://rnajournal.cshlp.org/rss/ahead.xml "RNASeq" "Journals" "Advanced"
+
+#Sequencing Technologies
+https://blog.basespace.illumina.com/feed "Illumina" "~Illumina: BaseSpace"
+
+#Blogs
+https://davetang.org/muse/feed "Blogs" 
+https://nsaunders.wordpress.com/feed/ "Blogs"
+https://nsaunders.wordpress.com/comments/feed/ "Blogs" "Comments"
+http://feeds.feedburner.com/TheGrandLocus?format=xml "Blogs" "Statistics"
+https://lh3.github.io/rss.xml "Blogs" 
+https://liorpachter.wordpress.com/feed/rss/ "Blogs" "Bioinformatics" 
+http://www.opiniomics.org/feed/ "Blogs" "Bioinformatics" 
+http://omicsomics.blogspot.com/feeds/posts/default "Blogs" 
+
+#Nature
+http://feeds.nature.com/nrg/rss/current "Nature" "Nature Reviews" "Genetics" "Journals"
+http://www.nature.com/ng/current_issue/rss/ "Nature" "Genetics" "Journals"
+https://www.nature.com/subjects/computational-biology-and-bioinformatics.rss "CompBio" "~Nature: Computational Biology" "Journals"
+http://feeds.nature.com/nmeth/rss/current "Nature" "MetaBioinformatics"
+
+#Oxford Journals
+https://academic.oup.com/rss/site_5143/3005.xml "Oxford" "Oxford BioBriefings" "Bioinformatics" "Current"
+https://academic.oup.com/rss/site_5143/advanceAccess_3005.xml "Oxford" "Oxford BioBriefings" "Bioinformatics" "Advanced"
+https://academic.oup.com/rss/site_5143/OpenAccess.xml "Oxford" "Oxford BioBriefings" "Bioinformatics" "OpenAccess"
+
+https://academic.oup.com/rss/site_5139/3001_56068.xml "Oxford" "Oxford Bioinformatics" "Bioinformatics" "Oxford Editor's Choice"
+https://academic.oup.com/rss/site_5139/3001.xml "Oxford" "Oxford Bioinformatics" "Bioinformatics" "Current"
+https://academic.oup.com/rss/site_5139/advanceAccess_3001.xml "Oxford" "Oxford Bioinformatics" "Bioinformatics" "Advanced"
+https://academic.oup.com/rss/site_5139/OpenAccess.xml "Oxford" "Oxford Bioinformatics" "Bioinformatics" "OpenAccess"
+
+#Journals
+https://genomebiology.biomedcentral.com/articles/most-recent/rss.xml "GenomeBiology" "Journals" "Genomics"
+http://journals.plos.org/ploscompbiol/feed/atom "CompBio" "~PLOS: Computational Biology" "Journals"
+https://bmcbioinformatics.biomedcentral.com/articles/most-recent/rss.xml "BMC" "Bioinformatics" 
+https://bmcgenet.biomedcentral.com/articles/most-recent/rss.xml "MetaBioinformatics" "BMC" "Genetics"
+https://bmcgenomics.biomedcentral.com/articles/most-recent/rss.xml "MetaBioinformatics" "BMC" "Genomics" 
+http://hwmaint.biorxiv.highwire.org/cgi/collection/rss?coll_alias=bioinformatics "bioRxiv" "Bioinformatics"
+
+#Linux
+https://lukesmith.xyz/rss.xml "Linux" "Blogs"
+
+#Bioinformatics Help
+https://www.biostars.org/feeds/latest/ "Biostars" "Latest" "Bioinformatics Help" 
+https://www.biostars.org/feeds/type/question/ "Biostars" "Questions" "~Biostar Questions" "Bioinformatics Help"
+https://www.biostars.org/feeds/planet/ "Biostars" "Blogs" "Bioinformatics Help"
+#http://bioinformatics.stackexchange.com/feeds "Bioinformatics Help"
+http://bioinformatics.stackexchange.com/feeds/hot "Bioinformatics Help" "Hot"
+http://feeds.feedburner.com/seqanswers-posts?format=xml "Bioinformatics Help" "Posts"
+
+#General Help
+https://stackoverflow.com/feeds/tag?tagnames=python&sort=hot "General Help" "Python"
+https://stackoverflow.com/feeds/tag?tagnames=javascript&sort=hot "General Help" "javascript" "web"
+https://stackoverflow.com/feeds/tag?tagnames=css&sort=hot "General Help" "css" "web"
+https://stackoverflow.com/feeds/tag?tagnames=html&sort=hot "General Help" "css" "web"
+https://stackoverflow.com/feeds/tag?tagnames=web&sort=hot "General Help" "web"
+https://stackoverflow.com/feeds/tag/snakemake "General Help" "Snakemake"
+https://stackoverflow.com/feeds/tag?tagnames=R&sort=hot "General Help" "R"
+https://stackoverflow.com/feeds/tag?tagnames=dplyr&sort=hot "General Help" "dplyr"
+https://stackoverflow.com/feeds/tag/django "General Help" "dplyr"
+https://stackoverflow.com/feeds/tag/rust "General Help" "rust"
+http://askubuntu.com/feeds/hot "General Help"
+http://serverfault.com/feeds/hot "General Help"
+
+#Bioinformatics Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCIy7PcN5RZ6N3WZO_zhOsMQ "Videocast"
+
+#Annual Reviews
+https://www.annualreviews.org/action/showFeed?ui=45mu4&mi=3fndc3&ai=sk&jc=genom&type=etoc&feed=atom "Reviews"
+https://www.annualreviews.org/action/showFeed?ui=45mu4&mi=3fndc3&ai=sj&jc=genet&type=etoc&feed=atom "Reviews"
+
+#Programming Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZ_EWaQZCZuGGfnuqUoHujw "Rust" "Programming"
+
+#Rust
+https://users.rust-lang.org/top/daily.rss "Rust" "Programming"
+https://users.rust-lang.org/top/weekly.rss "Rust" "Programming"
+https://users.rust-lang.org/top/yearly.rss "Rust" "Programming"
+https://users.rust-lang.org/top/all.rss "Rust" "Programming"
+https://users.rust-lang.org/latest.rss "Rust" "Programming"
+https://users.rust-lang.org/c/code-review/11.rss "Rust" "Programming"
+https://users.rust-lang.org/c/help/5.rss "Rust" "Programming"
+https://www.lpalmieri.com/rss.xml "Rust" "Programming"
+https://www.possiblerust.com/feed.xml "Rust" "Programming"
+https://fasterthanli.me/index.xml "Rust" "Programming"
+
+#Cooking
+https://based.cooking/rss.xml "Cooking" "Recipes"
+
+#Finance
+http://feeds.feedburner.com/Monevatorcom "Monevator" "Finance" "Investing"

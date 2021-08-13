@@ -1,0 +1,16 @@
+{
+  "diagnostic.virtualText": true,
+  "diagnostic.checkCurrentLine": false,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.enableMessage": "always",
+  "diagnostic.level": "information",
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "suggest.autoTrigger": "trigger",
+  "signature.enable": false,
+  "coc.preferences.snippets.enable": false,
+  "rust-analyzer.diagnostics.enable": false,
+  "python.linting.enabled": false,
+  "coc.preferences.hoverTarget":"float",
+  "sql.database": "postgresql",
+  "python.jediEnabled": false
+}

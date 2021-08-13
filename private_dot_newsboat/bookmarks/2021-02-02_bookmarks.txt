@@ -1,0 +1,3 @@
+http://biorxiv.org/cgi/content/short/2021.01.29.428779v1?rss=1	GraphUnzip: unzipping assembly graphs with long reads and Hi-C [NEW RESULTS]	interesting aproach to phasing assemblies with long reads	bioRxiv Subject Collection: Bioinformatics
+http://biorxiv.org/cgi/content/short/2021.01.29.428714v1?rss=1	HashSeq: A Simple, Scalable, and Conservative De Novo Variant Caller for 16S rRNA Gene Datasets [NEW RESULTS]	16S variant calling and sequencing	bioRxiv Subject Collection: Bioinformatics
+http://biorxiv.org/cgi/content/short/2021.01.29.428785v1?rss=1]	linc2function: A deep learning model to identify and assign function to long noncoding RNA (lncRNA) [NEW RESULTS]	assigning functions to lncRNA	bioRxiv Subject Collection: Bioinformatics

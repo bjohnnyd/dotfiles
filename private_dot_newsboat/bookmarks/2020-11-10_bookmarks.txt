@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/64759306/whats-the-difference-between-trait-and-impl-trait	What%27s the difference between `&Trait` and `&impl Trait`? [duplicate]	Rust interesting follow link for a great description of dynamic dispatch vs impl	Rust Dynamic Dispatch
+https://users.rust-lang.org/t/more-idiomatic-way-to-write-this-code/51252	More idiomatic way to write this code	Nice pointer on taking care of ellision not making result bounded to self	

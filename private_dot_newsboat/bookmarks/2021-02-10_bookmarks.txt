@@ -1,0 +1,1 @@
+http://rnajournal.cshlp.org/cgi/content/short/27/1/80?rss=1	A systematic evaluation of bioinformatics tools for identification of long noncoding RNAs [ARTICLE]	lncRNA tool evaluation	RNA current issue
