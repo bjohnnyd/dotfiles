@@ -10,10 +10,14 @@
 [user]
 	name = Johnny Debebe
 	email = "28043284+bjohnnyd@users.noreply.github.com "
+{{- if(index . "github")}}
 [github]
-	user = bjohnnyd
+	user = {{ github.user | quote }}
+{{- end }}
+{{- if(index . "bitbucket")}}
 [bitbucket]
-	user = JohnnyBD
+	user = {{ bitbucket.user | quote }}
+{{- end }}
 [cores]
 	excludesfile = ~/.gitignore_global
 	editor = vim
