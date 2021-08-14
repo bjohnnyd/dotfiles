@@ -106,31 +106,38 @@ while true; do
 		* ) echo "Please answer yes or no.";;
 	esac
 done
-while true; do
-	read -p "Do you wish to install VScode?" yn
-	case $yn in
-		[Yy] | [Yy]es ) installVScode;break;;
-		[Nn] | [Nn]o ) echo "Not installing VScode";break;;
-		q | quit ) echo "Stopping Installation";exit;;
-		* ) echo "Please answer yes or no.";;
-	esac
-done
-while true; do
-	read -p "Do you wish to install newest version of VIM  and add VIM ppa to software source list?" yn
-	case $yn in
-		[Yy] | [Yy]es ) updateVim;break;;
-		[Nn] | [Nn]o ) echo "Not updating VIM";break;;
-		q | quit ) echo "Stopping Installation";exit;;
-		* ) echo "Please answer yes or no.";;
-	esac
-done
 
-while true; do
-	read -p "Do you wish to install ZSH and OH-MY-ZSH?" yn
-	case $yn in
-		[Yy] | [Yy]es ) installOhMyZsh;break;;
-		[Nn] | [Nn]o ) echo "Not install oh-my-zsh";break;;
-		q | quit ) echo "Stopping Installation";exit;;
-		* ) echo "Please answer yes or no.";;
-	esac
-done
+# while true; do
+	# read -p "Do you wish to install VScode?" yn
+	# case $yn in
+		# [Yy] | [Yy]es ) installVScode;break;;
+		# [Nn] | [Nn]o ) echo "Not installing VScode";break;;
+		# q | quit ) echo "Stopping Installation";exit;;
+		# * ) echo "Please answer yes or no.";;
+	# esac
+# done
+
+# while true; do
+	# read -p "Do you wish to install newest version of VIM  and add VIM ppa to software source list?" yn
+	# case $yn in
+		# [Yy] | [Yy]es ) updateVim;break;;
+		# [Nn] | [Nn]o ) echo "Not updating VIM";break;;
+		# q | quit ) echo "Stopping Installation";exit;;
+		# * ) echo "Please answer yes or no.";;
+	# esac
+# done
+
+# while true; do
+	# read -p "Do you wish to install ZSH and OH-MY-ZSH?" yn
+	# case $yn in
+		# [Yy] | [Yy]es ) installOhMyZsh;break;;
+		# [Nn] | [Nn]o ) echo "Not install oh-my-zsh";break;;
+		# q | quit ) echo "Stopping Installation";exit;;
+		# * ) echo "Please answer yes or no.";;
+	# esac
+# done
+
+updateVim
+installZotero
+installConda
+installOhMyZsh
