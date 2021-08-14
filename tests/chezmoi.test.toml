@@ -2,6 +2,6 @@
     user="Foo Bar"
     email="foo@bar.com"
 [data.github]
-    username="foo"
+    user="foo"
 [data.bitbucket]
-    username="bar"
+    user="bar"

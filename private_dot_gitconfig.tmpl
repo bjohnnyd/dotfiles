@@ -7,9 +7,14 @@
     line-numbers = true
 [interactive]
     diffFilter = delta --color-only
+{{- if(index . "name")}}
 [user]
-	name = Johnny Debebe
-	email = "28043284+bjohnnyd@users.noreply.github.com "
+	name = {{ .name | quote }}
+{{ end }}
+{{- if(index . "email")}}
+[user]
+	email = {{ .email | quote }}
+{{ end }}
 {{- if(index . "github")}}
 [github]
 	user = {{ .github.user | quote }}
