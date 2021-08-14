@@ -1,15 +1,20 @@
 tag := "chezmoi"
 user := "foo"
 
-alias a := chezmoi-apply
-alias b := build
+alias a  := chezmoi-apply
+alias b  := build
 alias bn := build-no-cache
+alias ba := build-and-apply
 
+
+# Test application of dotfiles
+test:
+    docker run -it {{tag}} chezmoi -v apply
 
 # Test inititalization and application of dotfiles
-test:
+build-and-apply:
     docker build --no-cache -t {{tag}} .
-    docker run --user={{user}} {{tag}} chezmoi -v apply
+    docker run -it {{tag}} chezmoi -v apply
 
 # Build Docker Image
 build:
@@ -25,5 +30,4 @@ cat-gitconfig:
 
 # Applies the users dotfiles
 chezmoi-apply:
-    docker run --user={{user}} {{tag}} chezmoi -v apply
-
+    docker run {{tag}} chezmoi -v apply
