@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 ARG github_username=bjohnnyd
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 GITHUB_USER=$github_username EDITOR=vim
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 GITHUB_USER=$github_username EDITOR=vim PATH="/home/foo/bin:${PATH}"
 
 RUN apt-get update && \
     apt-get install git curl -y && \
