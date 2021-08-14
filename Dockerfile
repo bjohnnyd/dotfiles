@@ -15,4 +15,4 @@ WORKDIR /home/foo
 RUN mkdir /home/foo/.config && mkdir /home/foo/.config/chezmoi
 COPY tests/chezmoi.test.toml /home/foo/.config/chezmoi/chezmoi.toml
 
-RUN sh -c "$(curl -fsLS git.io/chezmoi)" -- init -v --apply $GITHUB_USER
+RUN sh -c "$(curl -fsLS git.io/chezmoi)" -- init -v $GITHUB_USER

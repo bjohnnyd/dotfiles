@@ -1,5 +1,6 @@
 tag := "chezmoi"
 
+alias a := chezmoi-apply
 alias b := build
 alias bn := build-no-cache
 
@@ -16,3 +17,6 @@ build-no-cache:
 cat-gitconfig:
     docker run {{tag}} cat .gitconfig
 
+# Applies the users dotfiles
+chezmoi-apply:
+    docker run {{tag}} chezmoi -v apply
