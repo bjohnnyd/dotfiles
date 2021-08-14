@@ -1,0 +1,7 @@
+[data]
+    user="Foo Bar"
+    email="foo@bar.com"
+[data.github]
+    username="foo"
+[data.bitbucket]
+    username="bar"

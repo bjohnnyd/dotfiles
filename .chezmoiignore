@@ -4,3 +4,4 @@ justfile
 assets/**
 wallpapers/**
 settings/**
+tests/**

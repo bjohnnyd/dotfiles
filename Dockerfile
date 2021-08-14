@@ -7,4 +7,12 @@ RUN apt-get update && \
     apt-get install git curl -y && \
     rm -rf /var/lib/apt/lists/*
 
+RUN useradd -m foo
+USER foo
+WORKDIR /home/foo
+
+# Running without -p ensures that error is thrown if user foo is not created
+RUN mkdir /home/foo/.config && mkdir /home/foo/.config/chezmoi
+COPY tests/chezmoi.test.toml /home/foo/.config/chezmoi/chezmoi.toml
+
 RUN sh -c "$(curl -fsLS git.io/chezmoi)" -- init -v --apply $GITHUB_USER

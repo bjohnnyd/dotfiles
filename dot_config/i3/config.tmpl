@@ -244,7 +244,7 @@ exec discord
 ## Wallpapers
 {{ if (eq .chezmoi.hostname "Minerva") }}
 exec_always feh --bg-scale /home/johnny/dotfiles/wallpapers/space-4k-2560%C3%971440.jpg
-{{ if (eq .chezmoi.hostname "Mentis") }}
+{{ else if (eq .chezmoi.hostname "Mentis") }}
 exec_always feh --bg-scale /home/johnny/dotfiles/wallpapers/space-4k-1920×1080.jpg
 {{ end }}
 
@@ -254,6 +254,7 @@ exec_always feh --bg-scale /home/johnny/dotfiles/wallpapers/space-4k-1920×1080.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@  -2% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
 {{ if (eq .chezmoi.hostname "Mentis") }}
 # Brigthness controls (needs /etc/X11/xorg.conf to be updated with display code)
 bindsym XF86MonBrightnessDown exec xbacklight -5
