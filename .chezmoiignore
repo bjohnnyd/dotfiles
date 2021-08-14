@@ -5,3 +5,5 @@ assets/**
 wallpapers/**
 settings/**
 tests/**
+.editorconfig
+scripts/not_used
