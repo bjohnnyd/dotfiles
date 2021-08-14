@@ -86,8 +86,6 @@ installOhMyZsh ()
     end "ZSH and Oh-My-Zsh Install"
 }
 
-installVScode (){}
-
 while true; do
 	read -p "Do you wish to install Zotero and add zotero ppa to software source list?" yn
 	case $yn in
