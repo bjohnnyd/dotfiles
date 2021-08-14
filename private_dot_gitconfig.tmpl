@@ -7,11 +7,14 @@
     line-numbers = true
 [interactive]
     diffFilter = delta --color-only
-{{- if(index . "name")}}
+{{- if(and (index . "name") (index . "email"))}}
 [user]
 	name = {{ .name | quote }}
-{{ end }}
-{{- if(index . "email")}}
+	email = {{ .email | quote }}
+{{- else if(index . "name") }}
+[user]
+	name = {{ .name | quote }}
+{{- else if(index . "email") }}
 [user]
 	email = {{ .email | quote }}
 {{ end }}

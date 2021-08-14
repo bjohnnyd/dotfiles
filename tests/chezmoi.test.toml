@@ -1,5 +1,5 @@
 [data]
-    user="Foo Bar"
+    name="Foo Bar"
     email="foo@bar.com"
 [data.github]
     user="foo"
