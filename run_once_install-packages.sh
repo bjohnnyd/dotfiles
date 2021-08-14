@@ -86,26 +86,26 @@ installOhMyZsh ()
     end "ZSH and Oh-My-Zsh Install"
 }
 
-while true; do
-	read -p "Do you wish to install Zotero and add zotero ppa to software source list?" yn
-	case $yn in
-		[Yy] | [Yy]es ) installZotero;break;;
-		[Nn] | [Nn]o ) echo "Not installing Zotero";break;;
-		q | quit ) echo "Stopping Installation";exit;;
-		* ) echo "Please answer yes or no.";;
-	esac
-done
+# while true; do
+	# read -p "Do you wish to install Zotero and add zotero ppa to software source list?" yn
+	# case $yn in
+		# [Yy] | [Yy]es ) installZotero;break;;
+		# [Nn] | [Nn]o ) echo "Not installing Zotero";break;;
+		# q | quit ) echo "Stopping Installation";exit;;
+		# * ) echo "Please answer yes or no.";;
+	# esac
+# done
 
-while true; do
-	read -p "Do you wish to install Miniconda3 or Anaconda3 ( [Aa]naconda or [Mm]iniconda or type [Nn]o to not install)?" man
-	case $man in
-		[Mm] | [Mm]iniconda ) installConda;break;;
-		[Aa] | [Aa]naconda ) installConda "Anaconda3";break;;
-		[Nn] | [Nn]o ) echo "Not installing Conda";break;;
-		q | quit ) echo "Stopping Installation";exit;;
-		* ) echo "Please answer yes or no.";;
-	esac
-done
+# while true; do
+	# read -p "Do you wish to install Miniconda3 or Anaconda3 ( [Aa]naconda or [Mm]iniconda or type [Nn]o to not install)?" man
+	# case $man in
+		# [Mm] | [Mm]iniconda ) installConda;break;;
+		# [Aa] | [Aa]naconda ) installConda "Anaconda3";break;;
+		# [Nn] | [Nn]o ) echo "Not installing Conda";break;;
+		# q | quit ) echo "Stopping Installation";exit;;
+		# * ) echo "Please answer yes or no.";;
+	# esac
+# done
 
 # while true; do
 	# read -p "Do you wish to install VScode?" yn
