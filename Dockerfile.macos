@@ -1,11 +1,11 @@
 FROM sickcodes/docker-osx:big-sur
 
 ARG github_username=bjohnnyd
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 GITHUB_USER=$github_username EDITOR=vim
+ENV GITHUB_USER=$github_username EDITOR=vim
 
 RUN useradd -m foo
-USER foo
-WORKDIR /home/foo
+# USER foo
+# WORKDIR /home/foo
 
 # Running without -p ensures that error is thrown if user foo is not created
 RUN mkdir /home/foo/.config && mkdir /home/foo/.config/chezmoi

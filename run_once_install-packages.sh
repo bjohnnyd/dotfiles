@@ -25,6 +25,10 @@ end() {
   echo "$cyan--------------------------------------------------$endc"
 }
 
+generalSetup() {
+    apt-get install software-properties-common
+}
+
 setupGit()
 {
     start "Github Install and Update"
@@ -77,7 +81,7 @@ installConda ()
     end "Conda Install"
 }
 
-installOHMYZSH ()
+installOhMyZsh ()
 {
     echo "ZSH and Oh-My-Zsh Install"
     apt install zsh -y
@@ -86,5 +90,58 @@ installOHMYZSH ()
     end "ZSH and Oh-My-Zsh Install"
 }
 
-installVScode (){}
+while true; do
+    read -p "Do you wish to install Zotero and add zotero ppa to software source list?" yn
+    case $yn in
+        [Yy] | [Yy]es ) installZotero;break;;
+        [Nn] | [Nn]o ) echo "Not installing Zotero";break;;
+        q | quit ) echo "Stopping Installation";exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
+while true; do
+    read -p "Do you wish to install Miniconda3 or Anaconda3 ( [Aa]naconda or [Mm]iniconda or type [Nn]o to not install)?" man
+    case $man in
+        [Mm] | [Mm]iniconda ) installConda;break;;
+        [Aa] | [Aa]naconda ) installConda "Anaconda3";break;;
+        [Nn] | [Nn]o ) echo "Not installing Conda";break;;
+        q | quit ) echo "Stopping Installation";exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install VScode?" yn
+    case $yn in
+        [Yy] | [Yy]es ) installVScode;break;;
+        [Nn] | [Nn]o ) echo "Not installing VScode";break;;
+        q | quit ) echo "Stopping Installation";exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install newest version of VIM  and add VIM ppa to software source list?" yn
+    case $yn in
+        [Yy] | [Yy]es ) updateVim;break;;
+        [Nn] | [Nn]o ) echo "Not updating VIM";break;;
+        q | quit ) echo "Stopping Installation";exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Do you wish to install ZSH and OH-MY-ZSH?" yn
+    case $yn in
+        [Yy] | [Yy]es ) installOhMyZsh;break;;
+        [Nn] | [Nn]o ) echo "Not install oh-my-zsh";break;;
+        q | quit ) echo "Stopping Installation";exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+# updateVim
+# installZotero
+# installConda
+# installOhMyZsh
