@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+PLAYGROUND_DIR="/tmp/rust-playgrounds"
+TIMESTAMP=$(date +"%Y%m%d%H%M%S")
+PROJECT_DIR="${PLAYGROUND_DIR}/playgrounds${TIMESTAMP}"
+
+TERM_VAL=$(env | grep "TERM=screen")
+cargo new $PROJECT_DIR
+cd $PROJECT_DIR
+
+if  ! { [ $TERM_VAL ] && [ -n "$TMUX" ] ; } then
+	tmux new-session
+fi
+
+tmux send-keys "nvim ${PROJECT_DIR}/src/main.rs" C-m \; 
+tmux split-window -h \; 
+tmux send-keys "cargo watch -s 'clear && cargo run -q'" C-m \; 
+tmux select-pane -L;
