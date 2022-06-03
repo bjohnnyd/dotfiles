@@ -5,3 +5,5 @@
     user="foo"
 [data.bitbucket]
     user="bar"
+[data.gitlab]
+    user="foobar"

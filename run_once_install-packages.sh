@@ -141,6 +141,7 @@ while true; do
     esac
 done
 
+generalSetup
 # updateVim
 # installZotero
 # installConda

@@ -7,13 +7,13 @@ alias bn := build-no-cache
 alias ba := build-and-apply
 
 
-# Test application of dotfiles
-test:
-    docker run -it {{tag}} chezmoi -v apply
-
 # Test inititalization and application of dotfiles
 build-and-apply:
     docker build --no-cache -t {{tag}} .
+    docker run -it {{tag}} chezmoi -v apply
+
+# Test application of dotfiles
+test:
     docker run -it {{tag}} chezmoi -v apply
 
 # Build Docker Image

@@ -7,3 +7,4 @@ settings/**
 tests/**
 .editorconfig
 scripts/not_used
+install.sh
